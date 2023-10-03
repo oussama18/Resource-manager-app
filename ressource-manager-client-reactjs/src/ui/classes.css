@@ -1,0 +1,118 @@
+.hide {
+  display: none;
+}
+
+.selected {
+  -webkit-backdrop-filter: blur(3px);
+          backdrop-filter: blur(3px);
+  background-color: #f0f0f026;
+}
+
+.fade-in {
+  opacity: 1 !important;
+  -webkit-transform: translateX(-50%) translateY(-50%) !important;
+          transform: translateX(-50%) translateY(-50%) !important;
+}
+
+.item-selected {
+  opacity: 0.5;
+}
+
+.show-form {
+  width: 400px !important;
+}
+
+.status {
+  text-align: center;
+}
+
+.allocate {
+  font-size: 12px;
+  color: aliceblue;
+  font-weight: bold;
+  padding: 0.3rem 0.6rem;
+  border-radius: 0.5rem;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  cursor: pointer;
+  background: -webkit-gradient(linear, right top, left top, from(#8100fa), color-stop(#983bfc), to(#9848ed));
+  background: linear-gradient(to left, #8100fa, #983bfc, #9848ed);
+}
+
+.deallocate {
+  font-size: 12px;
+  color: aliceblue;
+  font-weight: bold;
+  padding: 0.3rem 0.6rem;
+  border-radius: 0.5rem;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  cursor: pointer;
+  background: -webkit-gradient(linear, right top, left top, from(#ff00e6), to(#a700ef));
+  background: linear-gradient(to left, #ff00e6, #a700ef);
+}
+
+.affected {
+  font-size: 12px;
+  color: aliceblue;
+  font-weight: bold;
+  padding: 0.3rem 0.6rem;
+  border-radius: 0.5rem;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  background: -webkit-gradient(linear, right top, left top, from(#faab00), color-stop(#ffc800), to(#efab00));
+  background: linear-gradient(to left, #faab00, #ffc800, #efab00);
+}
+
+.not_affected {
+  font-size: 12px;
+  color: aliceblue;
+  font-weight: bold;
+  padding: 0.3rem 0.6rem;
+  border-radius: 0.5rem;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  background: -webkit-gradient(linear, right top, left top, from(#4fc500), color-stop(#4ce400), to(#00ab0b));
+  background: linear-gradient(to left, #4fc500, #4ce400, #00ab0b);
+}
+
+.loading {
+  opacity: 0.5;
+}
+
+.error-message {
+  background-color: rgba(246, 166, 166, 0.318);
+  font-size: 14px;
+  padding: 1rem;
+  border-radius: 0.5rem;
+  border: 1px solid #ff7d7d;
+  font-weight: bold;
+  color: red;
+}
+
+.loading-animation {
+  animation: loading_animation 0.6s infinite alternate-reverse;
+}
+
+@-webkit-keyframes loading_animation {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0.5;
+  }
+}
+
+@keyframes loading_animation {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0.5;
+  }
+}
+/*# sourceMappingURL=classes.css.map */

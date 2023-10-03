@@ -1,0 +1,54 @@
+@import url("root.css");
+@import url("layouts.css");
+.nav-bar, .rm-nav-bar {
+  height: 70px;
+  z-index: 222;
+}
+
+.nav-bar {
+  background-image: -webkit-gradient(linear, right top, left top, from(#422168), color-stop(#280086), to(#001369));
+  background-image: linear-gradient(to left, #422168, #280086, #001369);
+}
+
+.rm-nav-bar {
+  top: 0;
+  padding: 1rem 2rem;
+  border-radius: 40px 25px 40px 25px;
+  width: 80%;
+  margin-top: 0.5rem;
+  background-image: -webkit-gradient(linear, right top, left top, from(#6300a5), color-stop(#442195), to(#4d0069));
+  background-image: linear-gradient(to left, #6300a5, #442195, #4d0069);
+}
+
+.logo {
+  color: white;
+  font-size: 18px;
+}
+
+.link-container {
+  margin: 0 1rem;
+}
+
+.link {
+  font-size: 14px;
+  color: white;
+}
+
+.icon {
+  font-size: 18px;
+  color: white;
+}
+
+.rm-nav-bar .link-icon {
+  width: 40px;
+  height: 40px;
+  padding: 1rem;
+  border-radius: 50%;
+  -webkit-transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.link-icon:hover {
+  background-color: rgba(132, 0, 255, 0.8);
+}
+/*# sourceMappingURL=NavBars.css.map */

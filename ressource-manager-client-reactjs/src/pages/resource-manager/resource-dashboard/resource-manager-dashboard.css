@@ -1,0 +1,26 @@
+.main-resource-dashboard
+{
+    overflow-y: auto;
+    height: 100%;
+    width: 100%;
+    /* padding: 90px 0; */
+    padding: 70px 0;
+    /* background-image: url("../../../assets/images/2.jpg"); */
+    background-size: cover;
+    padding-left: 280px;
+    background-repeat: no-repeat;
+}
+
+.current-title
+{
+    font-size: 18px;
+    padding: 1rem 0;
+    color: rgb(247, 247, 247);
+    /* border-bottom: 3px solid rgb(203, 128, 247); */
+    /* background: rgb(52, 0, 150); */
+    /* padding: 0.6rem 0.8rem; */
+    /* border-radius: 0.5rem; */
+    font-weight: bold;
+    color: rgb(99, 0, 192);
+    width: fit-content;
+}

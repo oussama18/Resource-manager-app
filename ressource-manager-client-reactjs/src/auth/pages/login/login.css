@@ -1,0 +1,14 @@
+.main-login
+{
+    position: relative;
+    top: 70px;
+    height: 100% !important;
+    background-image: url("../../../assets/images/4.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    
+}
+
+.main-content{
+    height: 100%;
+}

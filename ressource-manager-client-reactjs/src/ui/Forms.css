@@ -1,0 +1,131 @@
+@import url("./layouts.css");
+label {
+  width: 100%;
+}
+
+input {
+  width: 100%;
+}
+
+.popup, .abstract-popup {
+  position: absolute;
+  top: 35%;
+  width: 600px;
+  height: 250px;
+  z-index: 999 !important;
+  left: 50%;
+  opacity: 0;
+  -webkit-transform: translateX(-50%) translateY(-150%);
+          transform: translateX(-50%) translateY(-150%);
+  background-color: white;
+  padding: 1.5rem 2rem;
+  border-radius: 0.35rem;
+  -webkit-box-shadow: rgba(47, 0, 92, 0.1) 0px 1px 1px 0px inset, rgba(47, 0, 92, 0.25) 0px 50px 100px -20px, rgba(47, 0, 92, 0.358) 0px 30px 60px -30px;
+          box-shadow: rgba(47, 0, 92, 0.1) 0px 1px 1px 0px inset, rgba(47, 0, 92, 0.25) 0px 50px 100px -20px, rgba(47, 0, 92, 0.358) 0px 30px 60px -30px;
+  -webkit-transition: opacity 0.8s cubic-bezier(0.165, 0.84, 0.44, 1), -webkit-transform 0.8s cubic-bezier(0.165, 0.84, 0.44, 1);
+  transition: opacity 0.8s cubic-bezier(0.165, 0.84, 0.44, 1), -webkit-transform 0.8s cubic-bezier(0.165, 0.84, 0.44, 1);
+  transition: opacity 0.8s cubic-bezier(0.165, 0.84, 0.44, 1), transform 0.8s cubic-bezier(0.165, 0.84, 0.44, 1);
+  transition: opacity 0.8s cubic-bezier(0.165, 0.84, 0.44, 1), transform 0.8s cubic-bezier(0.165, 0.84, 0.44, 1), -webkit-transform 0.8s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
+.abstract-popup {
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  overflow: hidden;
+  padding: 1.5rem 2rem;
+  padding-top: 5rem;
+  top: 50%;
+}
+
+.abstract-popup label {
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  font-size: 12px;
+  border-radius: 0.5rem;
+  background: -webkit-gradient(linear, right top, left top, from(#6c00c4), color-stop(#5e009c), to(#5b007c));
+  background: linear-gradient(to left, #6c00c4, #5e009c, #5b007c);
+  color: #fff;
+  padding: 0.5rem 1rem;
+}
+
+.abstract-popup .sys-form-input {
+  color: #5b007c;
+  width: 100% !important;
+  padding: 0.5rem !important;
+  margin: 1.5rem 0;
+  border: 1px solid rgba(94, 0, 156, 0.199);
+}
+
+.drop-down {
+  position: absolute;
+  top: 125px;
+  overflow: hidden;
+  z-index: 999 !important;
+  opacity: 0;
+  -webkit-transform: translateX(-50%) translateY(-150%);
+          transform: translateX(-50%) translateY(-150%);
+  background-color: white;
+  padding: 1rem 2.5rem;
+  border-radius: 0.35rem;
+  -webkit-box-shadow: rgba(47, 0, 92, 0.1) 0px 1px 1px 0px inset, rgba(47, 0, 92, 0.25) 0px 50px 100px -20px, rgba(47, 0, 92, 0.358) 0px 30px 60px -30px;
+          box-shadow: rgba(47, 0, 92, 0.1) 0px 1px 1px 0px inset, rgba(47, 0, 92, 0.25) 0px 50px 100px -20px, rgba(47, 0, 92, 0.358) 0px 30px 60px -30px;
+  -webkit-transition: opacity 0.8s cubic-bezier(0.165, 0.84, 0.44, 1), -webkit-transform 0.8s cubic-bezier(0.165, 0.84, 0.44, 1);
+  transition: opacity 0.8s cubic-bezier(0.165, 0.84, 0.44, 1), -webkit-transform 0.8s cubic-bezier(0.165, 0.84, 0.44, 1);
+  transition: opacity 0.8s cubic-bezier(0.165, 0.84, 0.44, 1), transform 0.8s cubic-bezier(0.165, 0.84, 0.44, 1);
+  transition: opacity 0.8s cubic-bezier(0.165, 0.84, 0.44, 1), transform 0.8s cubic-bezier(0.165, 0.84, 0.44, 1), -webkit-transform 0.8s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
+.drop-down .link {
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  color: black;
+  padding: 0.6rem 100%;
+  -webkit-transition: all 0.5s cubic-bezier(0.165, 0.84, 0.44, 1);
+  transition: all 0.5s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
+.drop-down .link:hover {
+  color: white;
+  background: #47017dcb;
+}
+
+.form-row {
+  width: 100%;
+  padding: 0.1rem;
+}
+
+.form-head {
+  position: absolute;
+  text-align: center;
+  padding: 1rem;
+  top: 0;
+  width: 100%;
+  left: 0;
+  color: #fff;
+  background: -webkit-gradient(linear, right top, left top, from(#6c00c4), color-stop(#5e009c), to(#5b007c));
+  background: linear-gradient(to left, #6c00c4, #5e009c, #5b007c);
+  border-bottom-right-radius: 50px;
+  border-bottom: 1px solid rgba(94, 0, 156, 0.448);
+}
+
+.form-input, .form-btn {
+  outline: none;
+  border: none;
+  padding: 0.5rem;
+  border-radius: 0.15rem;
+}
+
+.form-btn {
+  padding: 0.5rem;
+  cursor: pointer;
+}
+
+.btn-primary {
+  background-color: #772dff;
+  color: white;
+}
+/*# sourceMappingURL=Forms.css.map */

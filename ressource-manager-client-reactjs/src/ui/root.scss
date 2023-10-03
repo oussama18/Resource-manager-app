@@ -1,0 +1,40 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200&family=Roboto:wght@300&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;;
+    box-sizing: border-box;
+}
+
+body,html{
+    background-color: rgb(255, 255, 255);
+    font-family: 'Roboto',sans-serif;
+}
+
+/* width */
+::-webkit-scrollbar {
+    width: 5px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    background: #5e00a52e;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    border-radius: 25px;
+    background: rgb(153, 0, 255);
+  }
+  
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: rgb(179, 0, 199);
+  }
+
+:root{
+
+}
+
+li{ list-style: none;cursor: pointer;}
+a{color: black;text-decoration: none;}

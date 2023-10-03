@@ -1,0 +1,816 @@
+@import url("root.css");
+@import url("layouts.css");
+@import url("classes.css");
+
+.App
+{
+    height: 100vh;
+}
+
+.content,main
+{
+    height: 100%;
+    width: 100%;
+}
+
+.sidebar
+{
+    position: absolute;
+    left: 0;
+    top: 0;
+    background-image: linear-gradient(to left bottom,rgb(99, 0, 165),rgb(68, 33, 149),rgb(77, 0, 105));
+    // background-image: linear-gradient(to left bottom,rgb(43, 12, 100),rgb(56, 25, 130),rgb(77, 0, 105));
+    // background:linear-gradient(to left bottom,rgb(53, 0, 88),rgb(64, 16, 108),rgb(86, 0, 119));
+    z-index: 9999;
+    width: 280px;
+    padding: 0 0.6rem;
+    height: 100%;
+
+    .sidebar-head
+    {
+        height: 50px;
+        color: white;
+        font-size: 20px;
+        padding: 2rem;
+        padding-top: 3rem;
+        padding-bottom: 3rem;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.322);
+        text-align: center;
+    }
+
+    .sidebar-content
+    {
+        padding: 2rem;
+
+        .link-container
+        {
+            margin: 0.8rem 0;
+            border-radius: 0.5rem;
+            padding: 0.5rem 1rem;
+            height: 50px;
+            width: 100%;
+            transition: background 0.3s ease;
+            
+            .link
+            {
+                width: 100%;
+                padding: 0.5rem 1rem;
+                font-size: 14px;
+            }
+
+            .icons
+            {
+                width: 50px;
+                margin-left: auto;
+                margin-right: 1.5rem;
+                pointer-events: none;
+                color: rgba(255, 255, 255, 0.738);
+                font-size: 1.2rem;
+            }
+        }
+
+    }
+}
+
+.sidebar .link-container:hover
+{
+    background: rgba(255, 255, 255, 0.153);
+}
+
+// resources ui //
+
+.table
+{
+    width: 70%;
+    height: fit-content;
+    border-radius: 1.2rem;
+    overflow: hidden;
+    box-shadow: rgba(47, 0, 92, 0.1) 0px 1px 1px 0px inset, rgba(47, 0, 92, 0.25) 0px 50px 100px -20px, rgba(47, 0, 92, 0.358) 0px 30px 60px -30px;
+    // transition: all 0.5s ease-in-out;
+}
+
+.table-head
+{
+    background:linear-gradient(to left,rgb(122, 0, 204),rgb(138, 30, 238),rgb(93, 1, 197));
+    // background-image: linear-gradient(to left,rgb(99, 0, 165),rgb(68, 33, 149),rgb(77, 0, 105));
+    color: #fff;
+    font-size: 12px;
+    border-right: 1px solid #fff;
+    text-transform: uppercase;
+    padding: 1.5rem 2rem;
+
+    .block
+    {
+        text-align: center;
+    }
+
+    .oper
+    {
+        text-align: center;
+        padding: 0 0.3rem;
+    }
+}
+
+.resources-table,.accounts-table
+{
+    width: 100%;
+}
+
+.add-account-form
+{
+    width: fit-content;
+}
+
+.table-title
+{
+    font-size: 14px;
+    color: purple;
+    box-shadow: rgba(60, 0, 128, 0.123) 0px 10px 10px;
+    border-radius: 1rem;
+    padding: 0.6rem;
+}
+
+.tool-bar
+{
+    height: 70px;
+}
+
+.tool-icon
+{
+    border-radius: 20%;
+    padding: 0.7rem;
+    background: linear-gradient(to left,rgb(122, 0, 204),rgb(105, 32, 174),rgb(107, 9, 219));
+    transition: all 0.3s ease-in-out;
+
+    i 
+    {
+        color: #fff;
+        font-size: 20px;
+    }
+
+    &:hover
+    {
+        opacity: 0.7;
+    }
+}
+
+.btn-tool 
+{
+    cursor: pointer;
+    transition: padding 0.25s cubic-bezier(0.075, 0.82, 0.165, 1) , opacity 0.25s cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+
+.tool-create
+{
+    background:linear-gradient(to left,rgb(122, 0, 204),rgb(138, 30, 238),rgb(93, 1, 197));
+    color: white;
+    border-radius: 1rem;
+    padding: 0.8rem 1.5rem;
+}
+
+.tool-create:hover
+{
+    padding: 0.8rem 2.5rem;
+    opacity: 0.8;
+}
+
+.resource
+{
+    padding: 1rem 2rem;
+    color: rgb(63, 0, 92);
+    border-bottom: 1px solid rgba(117, 1, 163, 0.164);
+    background-color: rgb(253, 250, 255);
+    transition: background 0.3s cubic-bezier(0.485, 0.135, 0.15, 0.86);
+}
+
+.resource:hover
+{
+    background: rgba(126, 0, 223, 0.056);
+}
+
+.block
+{
+    text-align: center;
+    width: 100%;
+}
+
+.tool
+{
+    padding: 1.15rem;
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    color: rgb(255, 255, 255);
+    background-color: rgba(99, 0, 197, 0.795);
+    margin-left: 1rem;
+    text-align: center;
+    cursor: pointer;
+}
+
+// create form //
+
+.topbar
+{
+    // height: fit-content;
+    // margin-left: 2rem;
+    // padding-left: 2.5rem;
+    width: fit-content;
+    border-radius: 0.8rem;
+    overflow: hidden;
+    // border-left: 2px solid rgba(56, 0, 70, 0.166);
+    background:linear-gradient(to left,rgb(107, 0, 156),rgb(108, 0, 196),rgb(58, 0, 124));
+    margin-bottom: 2rem;
+}
+
+.item
+{
+    // background:linear-gradient(to left,rgb(107, 0, 156),rgb(108, 0, 196),rgb(58, 0, 124));
+    background-color: rgba(137, 43, 226, 0.497);
+    color: white;
+    // border-radius: 0.5rem;
+    cursor: pointer;
+    padding: 1rem 2.5rem;
+    // padding: 0.6rem 1rem;
+    // padding: 2rem;
+    // margin-right:1rem;
+    transition: all 0.3s cubic-bezier(0.485, 0.135, 0.15, 0.86);
+
+    &:hover
+    {
+        opacity: 0.5;
+    }
+}
+
+.form-create-container
+{
+    width: 500px;
+}
+
+.form-container
+{
+    width: 100%;
+}
+
+.add-form-container
+{
+    margin-left: 1rem;
+}
+
+.add-item-form 
+{
+    width: 100%;
+}
+
+.add-item-form .form-row
+{
+    width: 100%;
+    display: block;
+    margin-bottom: 1.5rem;
+}
+
+.add-item-form label
+{
+    background:linear-gradient(to left,rgb(108, 0, 196),rgb(94, 0, 156),rgb(91, 0, 124));
+    color: white;
+    font-size: 14px;
+    width: fit-content;
+    padding: 0.35rem 0.5rem;
+    border-radius: 0.4rem;
+}
+
+.sys-form-input
+{
+    outline: none;
+    font-size: 16px;
+    padding: 1rem;
+    height: 50px;
+    border: none;
+    width: 100%;
+    // border-radius: 0.5rem;
+    margin:0.5rem 0;
+    border-bottom: 2px solid rgba(41, 0, 79, 0.241);
+    // box-shadow:inset 0px 4px 6px rgba(36, 0, 56, 0.397);
+
+    &::placeholder
+    {
+        color: rgba(63, 0, 92, 0.349);
+    }
+}
+
+.sys-form-btn 
+{
+
+    outline: none;
+    padding:1rem;
+    font-size: 16px;
+    border: none;
+    border-radius: 0.5rem;
+    cursor: pointer;
+    color: white;
+    // transition: all 0.8s cubic-bezier(0.485, 0.135, 0.15, 0.86);
+}
+
+.sys-btn-primary
+{
+    background:linear-gradient(to left,rgb(107, 0, 156),rgb(108, 0, 196),rgb(58, 0, 124));
+}
+
+.add-item-button
+{
+    background:linear-gradient(to left,rgb(107, 0, 156),rgb(108, 0, 196),rgb(58, 0, 124));
+    color: white;
+    width: 50px;
+    height: 48px;
+    margin-left: 1.5rem;
+    padding: 0.5rem;
+    border-radius: 50%;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    transition: all 0.3s cubic-bezier(0.485, 0.135, 0.15, 0.86);
+
+    i
+    {
+        font-size: 25px;
+        transition: inherit;
+    }
+
+    &:hover
+    {
+        opacity: 0.75;
+
+        i
+        {
+            transform: rotate3d(0, 1, 1, 360deg);
+        }
+    }
+}
+
+.add-item-btn
+{
+    font-size: 12px;
+    margin: 0.5rem;
+    padding: 0.85rem;
+
+    &.add
+    {
+        background:linear-gradient(to left,rgb(2, 86, 231),rgb(0, 62, 248),rgb(0, 89, 255));
+
+    }
+
+    &.cancel
+    {
+        background: rgb(119, 0, 255);
+    }
+}
+
+.radio-choose
+{
+    padding: 1.5rem 0;
+}
+
+.radio-container {
+    display: block;
+    position: relative;
+    padding-left: 35px;
+    margin:1.5rem 0;
+    cursor: pointer;
+    font-size: 16px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+.radio-container input
+{
+    position: absolute;
+    opacity: 0;
+    left: 0;
+    top: 0;
+    height: 25px;
+    z-index: 9;
+    cursor: pointer;
+    transition: all 0.3s cubic-bezier(0.485, 0.135, 0.15, 0.86);
+}
+
+.checkmark {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 25px;
+    width: 25px;
+    background-color: #eee;
+    border-radius: 50%;
+    transition: all 0.3s cubic-bezier(0.485, 0.135, 0.15, 0.86);
+}
+
+/* On mouse-over, add a grey background color */
+.radio-container:hover input ~ .checkmark {
+    background-color: #ccc;
+  }
+  
+/* When the radio button is checked, add a blue background */
+.radio-container input:checked ~ .checkmark {
+    background: linear-gradient(to left,rgb(174, 0, 255),rgb(108, 0, 196),rgb(88, 0, 189));
+}
+  
+  /* Create the indicator (the dot/circle - hidden when not checked) */
+.checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+}
+  
+  /* Show the indicator (dot/circle) when checked */
+.radio-container input:checked ~ .checkmark:after {
+   display: block;
+}
+
+.form-left,.form-right
+{
+    width: 100%;
+    margin-right: 3rem;
+}
+
+// ************* //
+
+// .delete
+// {
+//     background-color: rgba(255, 0, 0, 0.137);
+//     color: red;
+//     border: 1px solid rgb(255, 0, 0);
+// }
+
+// .update
+// {
+//     background-color: rgba(0, 4, 255, 0.137);
+//     color: rgb(0, 4, 255);
+//     border: 1px solid rgb(0, 17, 255);
+// }
+
+/*** repports ***/
+
+.resource-report-card
+{
+    position: relative;
+    height: 225px;
+    padding: 15px;
+    border-radius: 0.5rem;
+    overflow: hidden;
+    box-shadow: 0 12px 20px rgba(0, 0, 0, 0.13);
+    transition: 0.6s cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+
+.info-sec
+{
+    margin-top: 6rem;
+    height: 25%;
+
+    .status
+    {
+        position: absolute;
+        top: 0;
+        font-size: 14px;
+        right: -120px;
+        
+        
+        &.panne i
+        {
+            background-color: rgb(255, 0, 0);
+            color: white;
+            padding: 0.8rem;
+            border-bottom-left-radius: 2rem;
+            border-top-left-radius: 2rem;
+            width: 50px;
+        }
+
+        &.dispo i
+        {
+            background-color: rgb(0, 216, 101);
+            color: white;
+            padding: 0.8rem;
+            border-bottom-left-radius: 2rem;
+            border-top-left-radius: 2rem;
+            width: 50px;
+        }
+        
+    }
+
+    .brand{
+        position: absolute;
+        left: 0px;
+        font-size: 12px;
+        top: 100px;
+        background-color: rgb(102, 0, 255);
+        color: white;
+        padding: 0.5rem 1rem;
+        border-bottom-right-radius: 2rem;
+        border-top-right-radius: 2rem;
+        width: fit-content;
+    }
+
+    .garentie{
+        position: absolute;
+        right: 0px;
+        top: 100px;
+        font-size: 14px;
+        // background-color: rgba(125, 45, 255, 0.942);
+        border: 1px solid rgb(149, 0, 255);
+        color: rgb(128, 0, 255);
+        padding: 0.5rem 1rem;
+        border-bottom-left-radius: 2rem;
+        border-top-left-radius: 2rem;
+        width: fit-content;
+    }
+
+    .name
+    {
+        position: absolute;
+        right: 0px;
+        font-size: 12px;
+        top: 0;
+        background-color: rgb(155, 88, 255);
+        color: white;
+        padding: 0.5rem 1rem;
+        border-bottom-left-radius: 2rem;
+        border-top-left-radius: 2rem;
+        width: fit-content;
+    }
+
+    .freq
+    {
+        position: absolute;
+        left: 0px;
+        font-size: 12px;
+        top: 118px;
+        width: 150px;
+        background: linear-gradient(to right,rgb(0, 157, 255),rgb(0, 179, 239),rgb(0, 255, 247));
+        color: white;
+        padding: 0.48rem 1rem;
+        border-bottom-right-radius: 2rem;
+        border-top-right-radius: 2rem;
+
+        &.rare
+        {
+            background: linear-gradient(to right,rgb(13, 196, 0),rgb(84, 181, 0),rgb(255, 238, 0));
+        }
+        &.permanente
+        {
+            background: linear-gradient(to right,rgb(252, 181, 0),rgb(255, 128, 0),rgb(255, 0, 0));
+        }
+    }
+
+    .order
+    {
+        position: absolute;
+        left: 0px;
+        font-size: 12px;
+        top: 152px;
+        background-color: rgb(255, 0, 136);
+        color: white;
+        padding: 0.5rem 1rem;
+        border-bottom-right-radius: 2rem;
+        border-top-right-radius: 2rem;
+        width: fit-content;
+    }
+
+    .expl
+    {
+        position: absolute;
+        left: 0px;
+        font-size: 12px;
+        top: 186px;
+        background-color: rgb(255, 149, 0);
+        color: white;
+        padding: 0.5rem 1rem;
+        border-bottom-right-radius: 2rem;
+        border-top-right-radius: 2rem;
+        width: fit-content;
+    }
+
+    .desc
+    {
+        position: absolute;
+        left: 0px;
+        font-size: 12px;
+        top: 100px;
+        background-color: rgb(255, 98, 0);
+        color: white;
+        padding: 0.5rem 1rem;
+        border-bottom-right-radius: 2rem;
+        border-top-right-radius: 2rem;
+        width: fit-content;
+    }
+}
+
+.type-sec
+{
+    position: absolute;
+    top: 0;
+    width: 40%;
+    left: 0;
+    height: 50%;
+
+    i {
+        font-size: 28px;
+    }
+}
+
+.report-sec
+{
+    position: relative;
+    height: 25%;
+    width: 100%;
+     // position: absolute;
+    // bottom: 0;
+    // right: 0;
+
+    .date{
+        width: fit-content;
+        position: relative;
+        top: 2rem;
+        font-size: 14px;
+    }
+}
+
+.report-btn
+{
+    cursor: pointer;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    padding: 0.5rem 1.25rem;
+    border: 1px solid rgb(255, 0, 0);
+    background-color: white;
+    // border-radius: 5px;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    transition: all 0.5s ease-out;
+
+    li{
+        color: rgb(255, 0, 0);
+        font-size: 16px;
+    }
+
+    &:hover
+    {
+        background-color: red;
+        transform: translateY(-8px);
+
+        li{
+            color: rgb(255, 255, 255);
+        }
+    }
+
+    .ban
+    {
+        color: rgba(255, 0, 0, 0.278);
+    }
+}
+
+.constat-btn
+{
+    cursor: pointer;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    padding: 0.5rem 1.25rem;
+    border: 1px solid rgb(255, 187, 0);
+    background-color: white;
+    // border-radius: 5px;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    transition: all 0.5s ease-out;
+
+    li{
+        color: rgb(255, 132, 0);
+        font-size: 16px;
+        transition: all 0.5s ease-out;
+    }
+
+    &:hover
+    {
+        background-color: rgb(255, 136, 0);
+        transform: translateY(-8px);
+
+        li{
+            color: rgb(255, 255, 255);
+        }
+    }
+}
+
+.computer
+{
+    color: white;
+    background: linear-gradient(to right,rgb(95, 0, 190),rgb(122, 0, 209),rgb(157, 72, 255));
+    padding: 2rem 1.5rem;
+    border-radius: 8px;
+    border-bottom-right-radius: 100px;
+    border-top-right-radius: 60px;
+    // box-shadow: 1px 2px 5px rgb(0, 119, 255);
+}
+
+.printer
+{
+    color: white;
+    background: linear-gradient(to left,rgb(60, 0, 255),rgb(93, 0, 255),rgb(96, 0, 205));
+    // box-shadow: 1px 2px 5px rgb(255, 0, 68);
+    padding: 2rem 1.5rem;
+    border-radius: 8px;
+    border-bottom-right-radius: 160px;
+    border-top-right-radius: 160px;
+}
+
+.fix-btn
+{
+    cursor: pointer;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    padding: 0.8rem;
+    width: 50px;
+    height: 50px;
+    border: 1px solid rgb(255, 196, 0);
+    background-color: white;
+    border-radius: 50%;
+    transition: all 0.5s ease-out;
+
+    li{
+        color: rgb(255, 196, 0);
+        font-size: 16px;
+        transition: all 0.5s ease-out;
+
+    }
+
+    &:hover
+    {
+        background-color: rgb(255, 162, 0);
+
+        li{
+            color: rgb(255, 255, 255);
+        }
+    }
+}
+
+.change-btn
+{
+    cursor: pointer;
+    position: absolute;
+    right: 60px;
+    bottom: 0;
+    padding: 0.8rem;
+    width: 50px;
+    height: 50px;
+    border: 1px solid rgb(179, 0, 255);
+    background-color: white;
+    border-radius: 50%;
+    transition: all 0.5s ease-out;
+
+    li{
+        color: rgb(183, 0, 255);
+        font-size: 16px;
+        transition: all 0.5s ease-out;
+    }
+
+    &:hover
+    {
+        background-color: rgb(140, 0, 255);
+
+        li{
+            color: rgb(255, 255, 255);
+        }
+    }
+}
+
+.mail-btn
+{
+    cursor: pointer;
+    position: absolute;
+    right: 120px;
+    bottom: 0;
+    padding: 0.8rem;
+    width: 50px;
+    height: 50px;
+    border: 1px solid rgb(43, 255, 0);
+    background-color: white;
+    border-radius: 50%;
+    transition: all 0.5s ease-out;
+
+    li{
+        color: rgb(38, 255, 0);
+        font-size: 16px;
+        transition: all 0.5s ease-out;
+    }
+
+    &:hover
+    {
+        background-color: rgb(43, 255, 0);
+
+        li{
+            color: rgb(255, 255, 255);
+        }
+    }
+}

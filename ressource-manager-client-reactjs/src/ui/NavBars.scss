@@ -1,0 +1,63 @@
+@import url("root.css");
+@import url("layouts.css");
+
+.nav-bar,.rm-nav-bar{
+    height: 70px;
+    z-index: 222;
+}
+
+.nav-bar
+{
+    background-image: linear-gradient(to left,#422168,rgb(40, 0, 134),rgb(0, 19, 105));
+}
+
+.rm-nav-bar
+{
+    top: 0;
+    padding: 1rem 2rem;
+    border-radius: 40px 25px 40px 25px;
+    
+    // width: 1200px;
+    width: 80%;
+    // margin: 0 auto;
+    margin-top: 0.5rem;
+    background-image: linear-gradient(to left,rgb(99, 0, 165),rgb(68, 33, 149),rgb(77, 0, 105));
+
+    // background-image: linear-gradient(to left,rgb(99, 0, 165),rgb(68, 33, 149),rgb(77, 0, 105));
+    // background-image: linear-gradient(to left,rgb(99, 0, 165),rgb(40, 0, 134),rgb(0, 19, 105));
+}
+
+.logo
+{
+    color: white;
+    font-size: 18px;
+}
+
+.link-container{
+    margin: 0 1rem;
+}
+
+.link{
+    font-size: 14px;
+    color: white;
+}
+
+.icon
+{
+    font-size: 18px;
+    color: white;
+}
+
+.rm-nav-bar .link-icon
+{
+    width: 40px;
+    height: 40px;
+    padding: 1rem;
+    border-radius: 50%;
+    transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.link-icon:hover
+{
+    background-color: rgba(132, 0, 255, 0.8);
+}
