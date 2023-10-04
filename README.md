@@ -26,6 +26,13 @@ The Faculty Resource Management App is a comprehensive solution designed to stre
 
 - **Frontend:** The user-friendly and responsive frontend is built using React, ensuring a seamless user experience.
 
+## Screenshots
+
+![Login Page](https://i.imgur.com/ScuPYc1.png)
+
+![Manage Ressource](https://i.imgur.com/t2JuBX0.jpg)
+
+
 ## Getting Started
 
 To run this application locally or deploy it to your server, clone it.
